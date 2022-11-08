@@ -7,6 +7,7 @@ describe('AppComponent', () => {
   let fixture:ComponentFixture<AppComponent>;
   //let spyAuthService = jasmine.createSpyObj('AuthService',['authenticate','checkAuthentication']);
   let authService:AuthService;
+  let demoSpyon = jasmine.createSpy('getData');
   beforeEach(async () => {
     await TestBed.configureTestingModule({
       declarations: [
@@ -53,5 +54,11 @@ describe('AppComponent', () => {
   })
   it('checking instance of auth',() => {
     expect(authService instanceof AuthService).toBeTruthy();
+  })
+  it('jasmine.createSpy()',() => {
+    demoSpyon();
+    expect(demoSpyon).toBeTruthy();
+    expect(demoSpyon).toHaveBeenCalled();
+    expect(demoSpyon).toHaveBeenCalledTimes(1);
   })
 });
