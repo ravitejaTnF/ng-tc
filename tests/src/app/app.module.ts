@@ -6,12 +6,14 @@ import { EventTestingComponent } from './event-testing/event-testing.component';
 import { SquarePipe } from './square.pipe';
 import { TypicodeComponent } from './typicode/typicode.component';
 import { HttpClientModule } from '@angular/common/http';
+import { XlComponent } from './xl/xl.component';
 @NgModule({
   declarations: [
     AppComponent,
     EventTestingComponent,
     SquarePipe,
-    TypicodeComponent
+    TypicodeComponent,
+    XlComponent
   ],
   imports: [
     BrowserModule,
